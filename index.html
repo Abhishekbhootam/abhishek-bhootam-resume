@@ -3,250 +3,443 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Abhishek Bhootam — Senior Frontend Engineer</title>
-  <meta name="description" content="Resume — Abhishek Bhootam" />
+  <title>Abhishek Bhootam — Senior Software Engineer</title>
+  <meta name="description" content="Senior Software Engineer building scalable web platforms." />
+
   <style>
-    :root {
-      --bg: #0b1220;
-      --card: #0f1a2d;
-      --text: #e6edf7;
-      --muted: #a8b3c7;
-      --accent: #6aa9ff;
-      --line: rgba(255,255,255,.08);
-      --pill: rgba(106,169,255,.12);
+    :root{
+      --bg:#fbfbf8;
+      --ink:#0f131a;
+      --muted:rgba(15,19,26,.58);
+      --muted2:rgba(15,19,26,.44);
+      --line:rgba(15,19,26,.08);
+      --accent:#f59e0b;
+      --max:1120px;
     }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background: radial-gradient(1200px 700px at 20% -10%, rgba(106,169,255,.18), transparent 60%),
-                  radial-gradient(900px 600px at 110% 10%, rgba(140,255,199,.10), transparent 55%),
-                  var(--bg);
-      color: var(--text);
-      line-height: 1.4;
-    }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
 
-    .wrap { max-width: 980px; margin: 0 auto; padding: 44px 18px 72px; }
-    .topbar {
-      display: flex; gap: 14px; align-items: flex-start; justify-content: space-between;
-      padding: 22px; border: 1px solid var(--line); border-radius: 18px;
-      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-      backdrop-filter: blur(10px);
-    }
-    .name { font-size: 28px; font-weight: 750; letter-spacing: .2px; margin: 0 0 6px; }
-    .title { color: var(--muted); margin: 0 0 12px; }
-    .meta { display: flex; flex-wrap: wrap; gap: 10px 14px; color: var(--muted); font-size: 14px; }
-    .meta span { display: inline-flex; gap: 8px; align-items: center; }
-    .btns { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
-    .btn {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      color: var(--text);
-      padding: 10px 12px;
-      border-radius: 12px;
-      font-weight: 600;
-      font-size: 14px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .btn.primary { border-color: rgba(106,169,255,.45); background: rgba(106,169,255,.12); }
-    .grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 16px; margin-top: 16px; }
-    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } .btns { justify-content: flex-start; } }
-    .card {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      border-radius: 18px;
-      padding: 18px;
-    }
-    h2 {
-      margin: 0 0 12px;
-      font-size: 16px;
-      letter-spacing: .6px;
-      text-transform: uppercase;
-      color: rgba(230,237,247,.85);
-    }
-    .summary { color: var(--muted); margin: 0; }
-    .list { margin: 0; padding-left: 18px; color: var(--muted); }
-    .list li { margin: 8px 0; }
+    *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
 
-    .job { padding: 14px 0; border-top: 1px solid var(--line); }
-    .job:first-child { border-top: 0; padding-top: 0; }
-    .jobhead { display: flex; gap: 12px; justify-content: space-between; align-items: baseline; }
-    .role { font-weight: 700; margin: 0; }
-    .company { color: var(--muted); margin: 4px 0 0; }
-    .dates { color: var(--muted); font-size: 13px; white-space: nowrap; }
-    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-    .tag {
-      font-size: 12px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: var(--pill);
-      border: 1px solid rgba(106,169,255,.25);
-      color: rgba(230,237,247,.9);
+    body{
+      margin:0;
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.45;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
-    .section { margin-top: 16px; }
-    .small { font-size: 13px; color: var(--muted); margin-top: 6px; }
-    .footer { margin-top: 22px; color: rgba(168,179,199,.75); font-size: 13px; }
-    .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+
+    a{color:inherit;text-decoration:none;}
+    a:hover{text-decoration:underline;text-underline-offset:4px;}
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:48px 20px 72px;
+    }
+
+    /* Top bar */
+    .top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      margin-bottom:54px;
+    }
+
+    .kicker{
+      font-size:15px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:#1f11d7;
+    }
+
+    .topLinks{
+      display:flex;
+      gap:18px;
+      font-size:14px;
+      color:var(--muted);
+      flex-wrap:wrap;
+    }
+
+    /* HERO LAYOUT (photo + big headline + right rail) */
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 240px 1fr 360px;
+      gap:56px;
+      align-items:start;
+      margin-bottom:96px;
+    }
+
+    @media (max-width: 1100px){
+      .heroGrid{ grid-template-columns: 220px 1fr 340px; gap:42px; }
+    }
+
+    @media (max-width: 960px){
+      .heroGrid{ grid-template-columns: 1fr; gap:44px; }
+    }
+
+    .profileWrap{
+      display:flex;
+      justify-content:flex-start;
+      padding-top:32px; /* matches screenshot vertical alignment */
+    }
+
+    .profilePic{
+      width:200px;
+      height:200px;
+      border-radius:50%;
+      object-fit:cover;
+      border:2px solid var(--line);
+    }
+
+    h1{
+      margin:0 0 26px;
+      font-size: clamp(46px, 6.2vw, 82px);
+      line-height:1.02;
+      font-weight:900;
+      letter-spacing:-0.035em;
+    }
+
+    .heroDot{ color:var(--accent); }
+
+    .heroText{
+      margin:0 0 26px;
+      font-size:18px;
+      max-width:62ch;
+      color:var(--muted);
+      line-height:1.65;
+    }
+
+    .heroLinks{
+      display:flex;
+      gap:20px;
+      font-weight:700;
+    }
+
+    /* RIGHT RAIL (like your earlier screenshot) */
+    .sideTitle{
+      font-size:12px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:black;
+      margin:0 0 18px;
+      font-weight:700
+    }
+
+    .workList{
+      list-style:none;
+      padding:0;
+      margin:0 0 54px;
+      display:grid;
+      gap:20px;
+    }
+
+    .workItem{
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+      font-size:16px;
+      color:var(--muted);
+      line-height:1.55;
+    }
+
+    .workIcon{
+      width:22px;
+      height:22px;
+      color:var(--accent);
+      flex:0 0 auto;
+      margin-top:3px;
+    }
+    .workIcon svg{ width:100%; height:100%; }
+
+    .timeline{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:34px;
+    }
+
+    .timelineItem{
+      display:grid;
+      grid-template-columns:28px 1fr;
+      column-gap:18px;
+      position:relative;
+    }
+
+    .dot{
+      width:5px;
+      height:5px;
+      border-radius:50%;
+      background:var(--accent);
+      margin-top:12px;
+      justify-self:center;
+    }
+
+    .line{
+      position:absolute;
+      left:13px;
+      top:26px;
+      bottom:-26px;
+      width:2px;
+      background:var(--line);
+    }
+
+    .timelineItem:last-child .line{ display:none; }
+
+    .years{
+      font-size:14px;
+      color:var(--muted2);
+      margin-bottom:6px;
+    }
+
+    .role{
+      font-size:18px;
+      font-weight:650;
+      color:rgba(15,19,26,.9);
+    }
+
+    /* EXPERIENCE SECTION */
+    .section{
+      margin-bottom:96px;
+    }
+
+    .sectionTitle{
+      font-size:14px;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:var(--muted2);
+      margin:0 0 32px;
+    }
+
+    .expList{
+      max-width: 86ch;
+      display:grid;
+      gap:36px;
+    }
+
+    .expItem{
+      border-top:1px solid var(--line);
+      padding-top:28px;
+    }
+    .expItem:first-child{ border-top:0; padding-top:0; }
+
+    .expTitle{
+      font-size:20px;
+      font-weight:760;
+      margin:0 0 6px;
+    }
+
+    .expCompany{
+      font-size:15px;
+      color:rgba(15,19,26,.75);
+      margin:0 0 6px;
+    }
+
+    .expMeta{
+      font-size:14px;
+      color:var(--muted2);
+      margin:0 0 12px;
+      line-height:1.6;
+    }
+
+    .expBullets{
+      margin:0;
+      padding-left:18px;
+      color:var(--muted);
+      line-height:1.7;
+      font-size:15.5px;
+    }
+    .expBullets li{ margin:7px 0; }
+
+    footer{
+      margin-top:80px;
+      font-size:13px;
+      color:var(--muted2);
+    }
   </style>
 </head>
 
 <body>
   <div class="wrap">
-    <header class="topbar">
-      <div>
-        <h1 class="name">Abhishek Bhootam</h1>
-        <p class="title">Senior Software Engineer • React / Next.js / TypeScript • Node.js</p>
 
-        <div class="meta">
-          <span>📍 Dallas, TX</span>
-          <span>✉️ <a href="mailto:abhishek.bhootam@gmail.com">abhishek.bhootam@gmail.com</a></span>
-          <span>📞 <span class="kbd">+1 214-212-9206</span></span>
-          <span>🔗 <a href="https://www.linkedin.com/in/abhishek-bhootam" target="_blank" rel="noreferrer">LinkedIn</a></span>
-        </div>
+    <!-- TOP -->
+    <div class="top">
+      <div class="kicker">Developer · Architect · Builder</div>
+      <div class="topLinks">
+        <span>Dallas, TX</span>
+        <a href="mailto:abhishek.bhootam@gmail.com">abhishek.bhootam@gmail.com</a>
+        <a href="https://www.linkedin.com/in/abhishek-bhootam" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </div>
+
+    <!-- HERO (Photo + Headline + Right rail) -->
+    <div class="heroGrid">
+
+      <div class="profileWrap">
+        <img src="abhishek.jpg" alt="Abhishek Bhootam" class="profilePic" />
       </div>
 
-      <div class="btns">
-        <a class="btn primary" href="#contact">Contact</a>
-        <a class="btn" href="#experience">Experience</a>
-        <a class="btn" href="#projects">Projects</a>
-      </div>
-    </header>
+      <section>
+        <h2>
+          I build systems
+          that help businesses scale<span class="heroDot">.</span>
+        </h2>
 
-    <div class="grid">
-      <main class="card">
-        <h2>Summary</h2>
-        <p class="summary">
-          Frontend-focused full-stack engineer with experience building production web platforms using
-          React, Next.js, TypeScript, and Node.js. Strong in API integration (REST/GraphQL), performance,
-          design-to-code execution, and scalable UI architecture (monorepos, shared component libraries).
+        <p class="heroText">
+          Senior Software Engineer focused on designing and building scalable, high-performance web
+          platforms with React, Next.js, TypeScript, and Node.js. I turn complex problems into
+          dependable systems that are built to last.
         </p>
 
-        <div class="section" id="experience">
-          <h2>Experience</h2>
-
-          <div class="job">
-            <div class="jobhead">
-              <div>
-                <p class="role">Senior Frontend Engineer — Storefront</p>
-                <p class="company">Jenius Bank • Dallas, TX</p>
-              </div>
-              <div class="dates">Oct 2024 — Present</div>
-            </div>
-
-            <ul class="list">
-              <li>Led development of production UIs using TypeScript, Next.js, React, and Node.js with focus on performance and maintainability.</li>
-              <li>Implemented server-side workflows (SSR/ISR, API handlers) integrating Contentful GraphQL and backend REST services.</li>
-              <li>Built reusable components/hooks for core journeys (dashboards, transactions), standardized error handling and loading states.</li>
-              <li>Partnered with design using Figma specs to deliver accessible, pixel-accurate UI components and flows.</li>
-              <li>Integrated LLM-powered APIs into internal tools (summarization, smart search, conversational help) and built streaming UI patterns.</li>
-            </ul>
-
-            <div class="tags">
-              <span class="tag">React</span>
-              <span class="tag">Next.js</span>
-              <span class="tag">TypeScript</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">GraphQL</span>
-              <span class="tag">Contentful</span>
-              <span class="tag">Cypress</span>
-            </div>
-          </div>
-
-          <div class="job">
-            <div class="jobhead">
-              <div>
-                <p class="role">Software Engineer</p>
-                <p class="company">Capital Group </p>
-              </div>
-            </div>
-
-            <ul class="list">
-              <li>(Add 3–5 bullets from your Capital Group work.)</li>
-            </ul>
-
-            <div class="tags">
-              <span class="tag">React</span>
-              <span class="tag">Node</span>
-              <span class="tag">AWS</span>
-            </div>
-          </div>
+        <div class="heroLinks">
+          <a href="#experience">Read my journey ↓</a>
         </div>
+      </section>
 
-        <div class="section" id="projects">
-          <h2>Projects</h2>
-          <div class="job">
-            <div class="jobhead">
-              <div>
-                <p class="role">AI-Assisted Search & Summarization (Personal / Internal)</p>
-                <p class="company">React + API Integration</p>
-              </div>
+      <aside>
+        <p class="sideTitle">Currently working on</p>
+        <ul class="workList">
+          <li class="workItem">
+            <span class="workIcon" aria-hidden="true">
+              <!-- icon stays same -->
+            </span>
+            <span>Building and maintaining CMS-driven web platforms</span>
+          </li>
+        
+          <li class="workItem">
+            <span class="workIcon" aria-hidden="true">
+              <!-- icon stays same -->
+            </span>
+            <span>Developing scalable frontend architecture and shared UI systems</span>
+          </li>
+        
+          <li class="workItem">
+            <span class="workIcon" aria-hidden="true">
+              <!-- icon stays same -->
+            </span>
+            <span>Integrating APIs and backend services into production UIs</span>
+          </li>
+        </ul>
+        
+
+        <p class="sideTitle">Career timeline</p>
+        <ol class="timeline">
+          <li class="timelineItem">
+            <span class="dot" aria-hidden="true"></span><span class="line" aria-hidden="true"></span>
+            <div>
+              <div class="years">Aug 2024–Present</div>
+              <div class="role">Senior Software Engineer — Jenius Bank</div>
             </div>
+          </li>
 
-            <ul class="list">
-              <li>Built a React UI that consumes LLM APIs for summarization and Q&A; added streaming tokens, retries, and safe fallbacks.</li>
-              <li>Implemented search UX patterns (debounced queries, citations/preview, “no results” states) to improve usability and trust.</li>
-            </ul>
-
-            <div class="tags">
-              <span class="tag">React</span>
-              <span class="tag">LLM APIs</span>
-              <span class="tag">UX</span>
+          <li class="timelineItem">
+            <span class="dot" aria-hidden="true"></span><span class="line" aria-hidden="true"></span>
+            <div>
+              <div class="years">Sep 2022–Aug 2024</div>
+              <div class="role">Senior Software Engineer — Capital Group</div>
             </div>
-          </div>
-        </div>
-      </main>
+          </li>
 
-      <aside class="card">
-        <h2>Skills</h2>
-        <div class="tags">
-		  <span class="tag">Next.js</span>
-          <span class="tag">React</span>
-		  <span class="tag">React Hooks</span>
-		  <span class="tag">React Query</span>
-          <span class="tag">TypeScript</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">Node.js</span>
-          <span class="tag">REST</span>
-          <span class="tag">GraphQL</span>
-          <span class="tag">Redux</span>
-          <span class="tag">Cypress</span>
-          <span class="tag">Jest</span>
-          <span class="tag">Contentful</span>
-		  <span class="tag">AEM</span>
-          <span class="tag">Okta/OIDC</span>
-          <span class="tag">AWS</span>
-          <span class="tag">Terraform</span>
-          <span class="tag">Figma</span>
-        </div>
+          <li class="timelineItem">
+            <span class="dot" aria-hidden="true"></span><span class="line" aria-hidden="true"></span>
+            <div>
+              <div class="years">Oct 2021–Sep 2022</div>
+              <div class="role">Software Engineer — Randstad USA</div>
+            </div>
+          </li>
 
-        <div class="section">
-          <h2>Highlights</h2>
-          <ul class="list">
-            <li>Monorepo experience (Nx/Turbo) with shared UI + server utilities</li>
-            <li>SSR/ISR performance optimization + caching strategies</li>
-            <li>LLM UI: streaming, partial outputs, loading/error/fallback states</li>
+          <li class="timelineItem">
+            <span class="dot" aria-hidden="true"></span><span class="line" aria-hidden="true"></span>
+            <div>
+              <div class="years">Apr 2019–Oct 2021</div>
+              <div class="role">Software Engineer — Capital Group</div>
+            </div>
+          </li>
+
+          <li class="timelineItem">
+            <span class="dot" aria-hidden="true"></span>
+            <div>
+              <div class="years">Apr 2017–Apr 2019</div>
+              <div class="role">Frontend Web Developer — Best Buy</div>
+            </div>
+          </li>
+        </ol>
+      </aside>
+
+    </div>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="sectionTitle">Experience</div>
+
+      <div class="expList">
+
+        <div class="expItem">
+          <div class="expTitle">Senior Software Engineer</div>
+          <div class="expCompany">Jenius Bank · Contract</div>
+          <div class="expMeta">Aug 2024 – Present · Dallas, TX · Hybrid</div>
+          <ul class="expBullets">
+            <li>Owned delivery of customer-facing features from requirements to release, focusing on reliability and maintainability.</li>
+            <li>Built reusable UI patterns in React/Next.js with strong attention to performance, accessibility, and consistent UX.</li>
+            <li>Integrated APIs and server-side workflows to support CMS-driven pages and complex user journeys.</li>
+            <li>Improved developer workflows through shared utilities, standards, and practical refactoring.</li>
           </ul>
         </div>
 
-        <div class="section">
-          <h2>Education</h2>
-		  <p class="summary">Masters: Master of Computer and Information Science</p>
-          <p class="summary">B.Tech: Computer Science Engineering</p>
+        <div class="expItem">
+          <div class="expTitle">Senior Software Engineer</div>
+          <div class="expCompany">Capital Group · Contract</div>
+          <div class="expMeta">Sep 2022 – Aug 2024 · Irvine, CA</div>
+          <ul class="expBullets">
+            <li>Built and modernized React applications with TypeScript, emphasizing clean architecture and reusable components.</li>
+            <li>Collaborated with backend teams to integrate APIs and improve end-to-end data flow and error handling.</li>
+            <li>Stabilized releases by strengthening testing practices and improving debugging workflows.</li>
+          </ul>
         </div>
 
-        <div class="section" id="contact">
-          <h2>Contact</h2>
-          <p class="summary">
-            Email: <a href="mailto:abhishek.bhootam@gmail.com">abhishek.bhootam@gmail.com</a><br />
-            LinkedIn: <a href="https://www.linkedin.com/in/abhishek-bhootam" target="_blank" rel="noreferrer">/abhishek-bhootam</a>
-          </p>
+        <div class="expItem">
+          <div class="expTitle">Software Engineer</div>
+          <div class="expCompany">Randstad USA · Full-time</div>
+          <div class="expMeta">Oct 2021 – Sep 2022 · Dallas, TX · Remote</div>
+          <ul class="expBullets">
+            <li>Delivered frontend features with a focus on predictable state, UI consistency, and performance.</li>
+            <li>Worked with cross-functional partners to refine requirements and ship improvements on a steady cadence.</li>
+          </ul>
         </div>
-      </aside>
-    </div>
+
+        <div class="expItem">
+          <div class="expTitle">Software Engineer</div>
+          <div class="expCompany">Capital Group · Contract</div>
+          <div class="expMeta">Apr 2019 – Oct 2021 · Irvine, CA · Remote</div>
+          <ul class="expBullets">
+            <li>Built reusable UI components and enterprise-grade features for internal and customer-facing workflows.</li>
+            <li>Improved usability by refining user flows, reducing friction, and handling edge cases cleanly.</li>
+          </ul>
+        </div>
+
+        <div class="expItem">
+          <div class="expTitle">Frontend Web Developer</div>
+          <div class="expCompany">Best Buy · Contract</div>
+          <div class="expMeta">Apr 2017 – Apr 2019 · United States</div>
+          <ul class="expBullets">
+            <li>Implemented responsive UI features with strong attention to cross-browser behavior and clean, maintainable markup.</li>
+            <li>Collaborated with designers and engineers to ship polished customer-facing web experiences.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Abhishek Bhootam
+    </footer>
   </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
